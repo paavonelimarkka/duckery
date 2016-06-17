@@ -1,5 +1,5 @@
 # duckery
 Duckery is a funny game
 
-## Kvaak.
+## kvak.
 ![](http://i.imgur.com/XyblZlJ.png)
