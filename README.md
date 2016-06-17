@@ -1,6 +1,12 @@
 # duckery
 Duckery is a funny game
 
+## Workflow
+
+- Use the sandbox scene for random development, it is ignored for git
+- Import ThirdPersonController yourself
+- Media folder is ignored, lets use dropbox or something for media files
+
 ## Initial plan (MVP)
 
 - You play a mommy duck
@@ -17,10 +23,5 @@ Duckery is a funny game
 - Car
 - Lawa
 
-## Workflow
-
-- Use the sandbox scene for random development, it is ignored for git
-- Import ThirdPersonController yourself
-- Media folder is ignored, lets use dropbox or something for media files
 
 ![](http://i.imgur.com/XyblZlJ.png)
