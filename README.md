@@ -17,5 +17,10 @@ Duckery is a funny game
 - Car
 - Lawa
 
-## kvak.
+## Workflow
+
+- Use the sandbox scene for random development, it is ignored for git
+- Import ThirdPersonController yourself
+- Media folder is ignored, lets use dropbox or something for media files
+
 ![](http://i.imgur.com/XyblZlJ.png)
