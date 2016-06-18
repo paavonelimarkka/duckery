@@ -17,8 +17,9 @@ public class ducklingMovement : MonoBehaviour {
 	public GameObject Score;
 	public GameObject gameCtrl;
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
+
     {
-    //    for (int i = 0; i < 10; i++)
+        //  for (int i = 0; i < 10; i++)
         {
             Vector3 randomPoint = center + Random.insideUnitSphere * range;
             NavMeshHit hit;
@@ -31,35 +32,40 @@ public class ducklingMovement : MonoBehaviour {
         result = Vector3.zero;
         return false;
     }
-    void Start()
-    {
+
+    void Start() {
 		score = 0;
 		scoreText.text = "SCORE : " + score;
     }
+
 	void OnTriggerEnter(Collider other) {
+
 		if (other.gameObject.tag == "duck" && seuraa == false) {
 			Debug.Log ("Ankanpoikanen osui ankkaan");
 			seuraa = true;
 			duck_collection.GetComponent<AudioSource> ().Play ();
-			gameCtrl.GetComponent<GameController> ().CountDucks (1);
-	//		Score ScoreCount.AddScore (2);
-		//	GetComponent<CapsuleCollider> ().enabled = false;
+            ScoreManager.ducklingsGathered++;
+			//  gameCtrl.GetComponent<GameController> ().CountDucks (1);
+	        //	Score ScoreCount.AddScore (2);
+		    //	GetComponent<CapsuleCollider> ().enabled = false;
 		}
+
 		if (other.gameObject.tag == "sewer") {
-	//		gameObject.GetComponentInChildren<MeshRenderer> ().enabled = false;
-	//		gameObject.GetComponent<ParticleSystem> ().Play ();
+	        //	gameObject.GetComponentInChildren<MeshRenderer> ().enabled = false;
+	        //	gameObject.GetComponent<ParticleSystem> ().Play ();
 			gameObject.SetActive(false);
 			kuolonhuuto.GetComponent<AudioSource> ().Play ();
-			gameCtrl.GetComponent<GameController> ().CountDucks (1);
-//			AddScore (-1);
-		//	kuolonmesta new ParticleSystem ().Play;
+            ScoreManager.ducklingsAlive--;
+			//  gameCtrl.GetComponent<GameController> ().CountDucks (1);
+            //	AddScore (-1);
+		    //	kuolonmesta new ParticleSystem ().Play;
 		}
+
 	} 
 
     void Update()
     {
         NavMeshAgent ankka = GetComponent<NavMeshAgent>();
-        // 
         Vector3 point;
 		if (RandomPoint (transform.position, range, out point) && seuraa == false) {
 			Debug.DrawRay (point, Vector3.up, Color.blue, 1.0f);

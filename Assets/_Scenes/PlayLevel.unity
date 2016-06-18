@@ -319,6 +319,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 432667139}
   - 114: {fileID: 432667138}
+  - 114: {fileID: 432667140}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -345,12 +346,24 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 432667137}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.2800272, y: 1.4679866, z: 11.198588}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 24
+--- !u!114 &432667140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432667137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3c9b9dde88d4c4f827c44ece567dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allDucklingsGathered: 0
 --- !u!1 &470258206
 GameObject:
   m_ObjectHideFlags: 0
