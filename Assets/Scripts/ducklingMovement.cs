@@ -9,8 +9,10 @@ public class ducklingMovement : MonoBehaviour {
 	public bool seuraa = false;
 	public GameObject duck;
 	public GameObject duck_collection;
+	public GameObject duck_collection_mutsi;
 	public GameObject duckling;
 	public GameObject kuolonhuuto;
+	public GameObject kuolonhuuto_mutsi;
 	public Transform kuolonmesta;
 	public Text scoreText;
 	public int score;
@@ -40,6 +42,7 @@ public class ducklingMovement : MonoBehaviour {
 			Debug.Log ("Ankanpoikanen osui ankkaan");
 			seuraa = true;
 			duck_collection.GetComponent<AudioSource> ().Play ();
+			duck_collection_mutsi.GetComponent<AudioSource> ().PlayDelayed (0.5f);
             ScoreManager.ducklingsGathered++;
 			//  gameCtrl.GetComponent<GameController> ().CountDucks (1);
 	        //	Score ScoreCount.AddScore (2);
@@ -51,6 +54,7 @@ public class ducklingMovement : MonoBehaviour {
 	        //	gameObject.GetComponent<ParticleSystem> ().Play ();
 			gameObject.SetActive(false);
 			kuolonhuuto.GetComponent<AudioSource> ().Play ();
+			kuolonhuuto_mutsi.GetComponent<AudioSource> ().PlayDelayed (0.5f);
             ScoreManager.ducklingsAlive--;
 			//  gameCtrl.GetComponent<GameController> ().CountDucks (1);
             //	AddScore (-1);
