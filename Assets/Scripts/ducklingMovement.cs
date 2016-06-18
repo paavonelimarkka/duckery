@@ -16,18 +16,14 @@ public class ducklingMovement : MonoBehaviour {
 	public int score;
 	public GameObject Score;
 	public GameObject gameCtrl;
-    bool RandomPoint(Vector3 center, float range, out Vector3 result)
 
-    {
-        //  for (int i = 0; i < 10; i++)
+    bool RandomPoint(Vector3 center, float range, out Vector3 result) {
+        Vector3 randomPoint = center + Random.insideUnitSphere * range;
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
         {
-            Vector3 randomPoint = center + Random.insideUnitSphere * range;
-            NavMeshHit hit;
-            if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
-            {
-                result = hit.position;
-                return true;
-            }
+            result = hit.position;
+            return true;
         }
         result = Vector3.zero;
         return false;
