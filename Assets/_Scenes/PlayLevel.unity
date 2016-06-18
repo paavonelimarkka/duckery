@@ -310,6 +310,47 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &432667137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 432667139}
+  - 114: {fileID: 432667138}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &432667138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432667137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cfc2aa62b85b84c8ebed3959cf231d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ducks: 0
+--- !u!4 &432667139
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432667137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.2800272, y: 1.4679866, z: 11.198588}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
 --- !u!1 &470258206
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +672,14 @@ Prefab:
       propertyPath: Score
       value: 
       objectReference: {fileID: 912626737}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: GameController
+      value: 
+      objectReference: {fileID: 432667137}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: gameCtrl
+      value: 
+      objectReference: {fileID: 432667137}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
   m_IsPrefabParent: 0
@@ -1136,6 +1185,14 @@ Prefab:
       propertyPath: Score
       value: 
       objectReference: {fileID: 912626737}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: GameController
+      value: 
+      objectReference: {fileID: 432667137}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: gameCtrl
+      value: 
+      objectReference: {fileID: 432667137}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
   m_IsPrefabParent: 0
@@ -1320,6 +1377,14 @@ Prefab:
       propertyPath: Score
       value: 
       objectReference: {fileID: 912626737}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: GameController
+      value: 
+      objectReference: {fileID: 432667137}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: gameCtrl
+      value: 
+      objectReference: {fileID: 432667137}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
   m_IsPrefabParent: 0
@@ -1450,6 +1515,14 @@ Prefab:
       propertyPath: Score
       value: 
       objectReference: {fileID: 912626737}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: GameController
+      value: 
+      objectReference: {fileID: 432667137}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: gameCtrl
+      value: 
+      objectReference: {fileID: 432667137}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
   m_IsPrefabParent: 0
@@ -1815,6 +1888,14 @@ Prefab:
       propertyPath: Score
       value: 
       objectReference: {fileID: 912626737}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: GameController
+      value: 
+      objectReference: {fileID: 432667137}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: gameCtrl
+      value: 
+      objectReference: {fileID: 432667137}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
   m_IsPrefabParent: 0
@@ -2042,6 +2123,14 @@ Prefab:
       propertyPath: Score
       value: 
       objectReference: {fileID: 912626737}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: GameController
+      value: 
+      objectReference: {fileID: 432667137}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: gameCtrl
+      value: 
+      objectReference: {fileID: 432667137}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
   m_IsPrefabParent: 0
@@ -2234,6 +2323,14 @@ Prefab:
       propertyPath: Score
       value: 
       objectReference: {fileID: 912626737}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: GameController
+      value: 
+      objectReference: {fileID: 432667137}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: gameCtrl
+      value: 
+      objectReference: {fileID: 432667137}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
   m_IsPrefabParent: 0
@@ -2426,6 +2523,14 @@ Prefab:
       propertyPath: Score
       value: 
       objectReference: {fileID: 912626737}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: GameController
+      value: 
+      objectReference: {fileID: 432667137}
+    - target: {fileID: 11470856, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
+      propertyPath: gameCtrl
+      value: 
+      objectReference: {fileID: 432667137}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf372ea918c77734a9014ecc2d35b093, type: 2}
   m_IsPrefabParent: 0
