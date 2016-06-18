@@ -9,6 +9,7 @@ public class ducklingMovement : MonoBehaviour {
 	public GameObject duck;
 	public GameObject duck_collection;
 	public GameObject duckling;
+	public GameObject kuolonhuuto;
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
     //    for (int i = 0; i < 10; i++)
@@ -37,6 +38,7 @@ public class ducklingMovement : MonoBehaviour {
 		}
 		if (other.gameObject.tag == "sewer") {
 			gameObject.SetActive(false);
+			kuolonhuuto.GetComponent<AudioSource> ().Play ();
 		}
 	} 
     void Update()
