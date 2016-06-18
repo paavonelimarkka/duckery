@@ -5,9 +5,7 @@ public class ScoreManager : MonoBehaviour {
 
     public static int ducklingsGathered;
     public static int ducklingsAlive;
-    public bool allDucklingsGathered = false;
-
-    public GameObject scorescreen = GameObject.FindWithTag("scorescreen");
+    public static bool allDucklingsGathered = false;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +19,6 @@ public class ScoreManager : MonoBehaviour {
         if (ducklingsGathered == ducklingsAlive)
         {
             allDucklingsGathered = true;
-            scorescreen.SetActive(true);
         }
 	}
 }

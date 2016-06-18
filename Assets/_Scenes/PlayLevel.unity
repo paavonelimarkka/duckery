@@ -540,8 +540,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3c9b9dde88d4c4f827c44ece567dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allDucklingsGathered: 0
-  scorescreen: {fileID: 1662482724}
 --- !u!1 &470258206
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,7 +742,7 @@ MonoBehaviour:
   m_JumpPower: 6
   m_GravityMultiplier: 2
   m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 1
+  m_MoveSpeedMultiplier: 2
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
 --- !u!114 &506656326
@@ -1371,7 +1369,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
 --- !u!1 &878976577
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,6 +2398,34 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0da337e15bbe16c459e7be98b1dffcaa, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1611048396 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: a54a7ae24ed514a01aaf823e58969337, type: 3}
+  m_PrefabInternal: {fileID: 1243303887}
+--- !u!65 &1611048397
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1611048396}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5, y: 5, z: 3.5}
+  m_Center: {x: 1, y: 0, z: -1}
+--- !u!114 &1611048398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1611048396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fad1812a7311ed41aaef7c37c7a78f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorescreen: {fileID: 1662482724}
 --- !u!1001 &1643782899
 Prefab:
   m_ObjectHideFlags: 0

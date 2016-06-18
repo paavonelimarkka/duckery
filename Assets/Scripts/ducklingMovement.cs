@@ -32,8 +32,7 @@ public class ducklingMovement : MonoBehaviour {
     }
 
     void Start() {
-		score = 0;
-		scoreText.text = "SCORE : " + score;
+
     }
 
 	void OnTriggerEnter(Collider other) {
