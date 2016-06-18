@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class ducklingMovement : MonoBehaviour {
@@ -10,6 +11,11 @@ public class ducklingMovement : MonoBehaviour {
 	public GameObject duck_collection;
 	public GameObject duckling;
 	public GameObject kuolonhuuto;
+	public Transform kuolonmesta;
+	public Text scoreText;
+	public int score;
+	public GameObject Score;
+	public GameObject gameCtrl;
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
     //    for (int i = 0; i < 10; i++)
@@ -27,20 +33,29 @@ public class ducklingMovement : MonoBehaviour {
     }
     void Start()
     {
-
+		score = 0;
+		scoreText.text = "SCORE : " + score;
     }
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag == "duck" && seuraa == false) {
 			Debug.Log ("Ankanpoikanen osui ankkaan");
 			seuraa = true;
 			duck_collection.GetComponent<AudioSource> ().Play ();
+			gameCtrl.GetComponent<GameController> ().CountDucks (1);
+	//		Score ScoreCount.AddScore (2);
 		//	GetComponent<CapsuleCollider> ().enabled = false;
 		}
 		if (other.gameObject.tag == "sewer") {
+	//		gameObject.GetComponentInChildren<MeshRenderer> ().enabled = false;
+	//		gameObject.GetComponent<ParticleSystem> ().Play ();
 			gameObject.SetActive(false);
 			kuolonhuuto.GetComponent<AudioSource> ().Play ();
+			gameCtrl.GetComponent<GameController> ().CountDucks (1);
+//			AddScore (-1);
+		//	kuolonmesta new ParticleSystem ().Play;
 		}
 	} 
+
     void Update()
     {
         NavMeshAgent ankka = GetComponent<NavMeshAgent>();
