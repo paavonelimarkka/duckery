@@ -8,6 +8,7 @@ public class ducklingMovement : MonoBehaviour {
 	public bool seuraa = false;
 	public GameObject duck;
 	public GameObject duck_collection;
+	public GameObject duckling;
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
     //    for (int i = 0; i < 10; i++)
@@ -28,11 +29,14 @@ public class ducklingMovement : MonoBehaviour {
 
     }
 	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.tag == "duck") {
+		if (other.gameObject.tag == "duck" && seuraa == false) {
 			Debug.Log ("Ankanpoikanen osui ankkaan");
 			seuraa = true;
 			duck_collection.GetComponent<AudioSource> ().Play ();
-			GetComponent<CapsuleCollider> ().enabled = false;
+		//	GetComponent<CapsuleCollider> ().enabled = false;
+		}
+		if (other.gameObject.tag == "sewer") {
+			gameObject.SetActive(false);
 		}
 	} 
     void Update()
