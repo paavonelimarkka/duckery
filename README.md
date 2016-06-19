@@ -1,6 +1,10 @@
 # duckery
 Duckery is a funny game
 
+## Downloads
+
+- [Windows build](https://dl.dropboxusercontent.com/u/82693049/PowerlanAssets/Builds/Duckery_Build1.zip)
+
 ## Workflow
 
 - Use the sandbox scene for random development, it is ignored for git
