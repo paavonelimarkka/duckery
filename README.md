@@ -1,7 +1,7 @@
 # duckery
 Duckery is a funny game
 
-![](https://youtu.be/NmRkOcOd4Ws)
+[Youtube link](https://youtu.be/NmRkOcOd4Ws)
 
 ## Downloads
 
