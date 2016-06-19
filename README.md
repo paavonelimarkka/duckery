@@ -3,7 +3,7 @@ Duckery is a funny game
 
 ## Downloads
 
-- [Windows build](https://dl.dropboxusercontent.com/u/82693049/PowerlanAssets/Builds/Duckery_Build1.zip) (45.8mb)
+- [Windows build](https://dl.dropboxusercontent.com/u/82693049/PowerlanAssets/Builds/Duckery_Build1.zip) (.zip, 45.8mb)
 
 ## Workflow
 
