@@ -38,7 +38,6 @@ public class ducklingMovement : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 
 		if (other.gameObject.tag == "duck" && seuraa == false) {
-			Debug.Log ("Ankanpoikanen osui ankkaan");
 			seuraa = true;
 			duck_collection.GetComponent<AudioSource> ().Play ();
 			duck_collection_mutsi.GetComponent<AudioSource> ().PlayDelayed (0.5f);

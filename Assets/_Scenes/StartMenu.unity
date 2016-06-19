@@ -396,7 +396,6 @@ GameObject:
   - 222: {fileID: 864507335}
   - 114: {fileID: 864507334}
   - 114: {fileID: 864507333}
-  - 114: {fileID: 864507336}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -508,17 +507,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 864507331}
---- !u!114 &864507336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 864507331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ba7065eb7b1a4816ae10ca76e535a28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1021073416
 GameObject:
   m_ObjectHideFlags: 0
