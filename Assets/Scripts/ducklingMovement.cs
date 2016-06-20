@@ -8,16 +8,8 @@ public class ducklingMovement : MonoBehaviour {
     public float range = 10.0f;
 	public bool seuraa = false;
 	public GameObject duck;
-	public GameObject duck_collection;
-	public GameObject duck_collection_mutsi;
-	public GameObject duckling;
-	public GameObject kuolonhuuto;
-	public GameObject kuolonhuuto_mutsi;
-	public Transform kuolonmesta;
-	public Text scoreText;
-	public int score;
-	public GameObject Score;
-	public GameObject gameCtrl;
+    public AudioClip kuolonhuuto;
+    public AudioClip keraysaani;
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result) {
         Vector3 randomPoint = center + Random.insideUnitSphere * range;
@@ -31,7 +23,8 @@ public class ducklingMovement : MonoBehaviour {
         return false;
     }
 
-    void Start() {
+    void Start()
+    {
 
     }
 
@@ -39,26 +32,15 @@ public class ducklingMovement : MonoBehaviour {
 
 		if (other.gameObject.tag == "duck" && seuraa == false) {
 			seuraa = true;
-			duck_collection.GetComponent<AudioSource> ().Play ();
-			duck_collection_mutsi.GetComponent<AudioSource> ().PlayDelayed (0.5f);
+            SoundManager.instance.PlaySingle(keraysaani);
             ScoreManager.ducklingsGathered++;
-			//  gameCtrl.GetComponent<GameController> ().CountDucks (1);
-	        //	Score ScoreCount.AddScore (2);
-		    //	GetComponent<CapsuleCollider> ().enabled = false;
 		}
 
 		if (other.gameObject.tag == "sewer") {
-	        //	gameObject.GetComponentInChildren<MeshRenderer> ().enabled = false;
-	        //	gameObject.GetComponent<ParticleSystem> ().Play ();
 			gameObject.SetActive(false);
-			kuolonhuuto.GetComponent<AudioSource> ().Play ();
-			kuolonhuuto_mutsi.GetComponent<AudioSource> ().PlayDelayed (0.5f);
+            SoundManager.instance.PlaySingle(kuolonhuuto);
             ScoreManager.ducklingsAlive--;
-			//  gameCtrl.GetComponent<GameController> ().CountDucks (1);
-            //	AddScore (-1);
-		    //	kuolonmesta new ParticleSystem ().Play;
 		}
-
 	} 
 
     void Update()
