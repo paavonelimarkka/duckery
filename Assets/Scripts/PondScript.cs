@@ -9,7 +9,7 @@ public class PondScript : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "duck" && ScoreManager.allDucklingsGathered == true) {
-            scoretext.text = ScoreManager.ducklingsGathered.ToString();
+            scoretext.text = ScoreManager.ducklingsAlive.ToString();
             scorescreen.SetActive(true);
         }
     }
